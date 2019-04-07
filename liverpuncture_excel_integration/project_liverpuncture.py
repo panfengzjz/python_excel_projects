@@ -53,8 +53,8 @@ def backup_excel(src_name, backup_name):
 
     for m in range(1, max_row+1):
         for n in range(1, max_column+1):
-            cell1 = sheet1.cell(n, m).value #获取data单元格数据
-            sheet2.cell(n, m).value = cell1 #赋值到test单元格
+            cell1 = sheet1.cell(m, n).value #获取data单元格数据
+            sheet2.cell(m, n).value = cell1 #赋值到test单元格
 
     wb2.save(backup_name)   #保存数据
     wb1.close()
